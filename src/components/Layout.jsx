@@ -67,15 +67,16 @@ function Layout({ children }) {
               </a>
             </nav>
 
-            <button
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center space-x-2 cursor-pointer transition-colors"
-              onClick={() => window.open('https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap', '_blank')}
+            <a
+              href="https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center space-x-2 cursor-pointer transition-colors no-underline"
               style={{position: 'relative', zIndex: 1000}}
-              type="button"
             >
               <Download className="h-4 w-4" />
               <span>Add to Chrome</span>
-            </button>
+            </a>
           </div>
         </div>
       </header>
