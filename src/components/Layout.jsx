@@ -70,6 +70,7 @@ function Layout({ children }) {
             <Button 
               className="bg-blue-600 hover:bg-blue-700 text-white"
               onClick={() => window.open('https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap', '_blank')}
+              style={{position: 'relative', zIndex: 1000, cursor: 'pointer'}}
             >
               <Download className="h-4 w-4 mr-2" />
               Add to Chrome
