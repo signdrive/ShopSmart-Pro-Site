@@ -11,8 +11,7 @@ import BugReports from './pages/BugReports'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 import CookiePolicy from './pages/CookiePolicy'
-import './input.css'
-import './index.css' // ← This must be here
+// Tailwind CSS is imported in main.jsx
 
 function App() {
   return (

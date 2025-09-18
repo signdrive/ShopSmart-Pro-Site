@@ -221,7 +221,10 @@ function HowItWorks() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">Click the "Add to Chrome" button below to go directly to our Chrome Web Store page.</p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                <Button 
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                  onClick={() => window.open('https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap', '_blank')}
+                >
                   Go to Store
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
@@ -264,7 +267,11 @@ function HowItWorks() {
           <p className="text-xl text-blue-100">
             Install ShopSmart Pro now and start saving money in minutes.
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg">
+          <Button 
+            size="lg" 
+            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg"
+            onClick={() => window.open('https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap', '_blank')}
+          >
             <Download className="h-5 w-5 mr-2" />
             Add to Chrome - It's Free
           </Button>

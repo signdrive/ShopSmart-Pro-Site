@@ -76,7 +76,11 @@ function DownloadPage() {
           
           {/* Main Download Button */}
           <div className="space-y-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-xl">
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-xl"
+              onClick={() => window.open('https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap', '_blank')}
+            >
               <Chrome className="h-6 w-6 mr-3" />
               Add to Chrome - It's Free
             </Button>
@@ -241,7 +245,11 @@ function DownloadPage() {
           <p className="text-xl text-blue-100">
             Download ShopSmart Pro now and never overpay for online purchases again.
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-12 py-6 text-xl">
+          <Button 
+            size="lg" 
+            className="bg-white text-blue-600 hover:bg-gray-100 px-12 py-6 text-xl"
+            onClick={() => window.open('https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap', '_blank')}
+          >
             <Download className="h-6 w-6 mr-3" />
             Add to Chrome - It's Free
           </Button>
