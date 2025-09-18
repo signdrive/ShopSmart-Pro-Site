@@ -12,7 +12,7 @@ function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <Link to="/" className="flex items-center space-x-2">
@@ -21,30 +21,50 @@ function Layout({ children }) {
             </Link>
             
             <nav className="hidden md:flex space-x-8">
-              <Link 
-                to="/features" 
-                className={`transition-colors ${isActive('/features') ? 'text-blue-600 font-medium' : 'text-gray-700 hover:text-blue-600'}`}
+              <a 
+                href="/features" 
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault()
+                  console.log('Features clicked - navigating...')
+                  window.location.href = '/features'
+                }}
               >
                 Features
-              </Link>
-              <Link 
-                to="/how-it-works" 
-                className={`transition-colors ${isActive('/how-it-works') ? 'text-blue-600 font-medium' : 'text-gray-700 hover:text-blue-600'}`}
+              </a>
+              <a 
+                href="/how-it-works" 
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault()
+                  console.log('How It Works clicked - navigating...')
+                  window.location.href = '/how-it-works'
+                }}
               >
                 How It Works
-              </Link>
-              <Link 
-                to="/download" 
-                className={`transition-colors ${isActive('/download') ? 'text-blue-600 font-medium' : 'text-gray-700 hover:text-blue-600'}`}
+              </a>
+              <a 
+                href="/download" 
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault()
+                  console.log('Download clicked - navigating...')
+                  window.location.href = '/download'
+                }}
               >
                 Download
-              </Link>
-              <Link 
-                to="/support" 
-                className={`transition-colors ${isActive('/support') ? 'text-blue-600 font-medium' : 'text-gray-700 hover:text-blue-600'}`}
+              </a>
+              <a 
+                href="/support" 
+                className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault()
+                  console.log('Support clicked - navigating...')
+                  window.location.href = '/support'
+                }}
               >
                 Support
-              </Link>
+              </a>
             </nav>
 
             <Button 
