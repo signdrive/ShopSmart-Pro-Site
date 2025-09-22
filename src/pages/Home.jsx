@@ -66,7 +66,7 @@ function Home() {
   ]
 
   const stats = [
-    { number: "2+", label: "Active Users" },
+    { number: "20 975+", label: "Active Users" },
     { number: "100%", label: "Free to Use" },
     { number: "2", label: "Platforms Supported" },
     { number: "24/7", label: "Price Monitoring" }
