@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEO from '../components/SEO'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
@@ -72,8 +73,37 @@ function Home() {
     { number: "24/7", label: "Price Monitoring" }
   ]
 
+  const seoData = {
+    title: "ShopSmart Pro - Your Smarter Shopping Assistant | Compare Prices, Track Deals & Save Money",
+    description: "Track prices, compare deals, and save money with one click. The ultimate shopping assistant for Amazon & eBay. Free Chrome extension.",
+    keywords: "price comparison, price tracking, shopping assistant, Amazon deals, eBay deals, price monitoring, discount finder, coupon code, cashback deals, price alerts",
+    url: "https://shopsmartpro.com/",
+    image: "https://shopsmartpro.com/images/shopsmart-pro-social.jpg",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ShopSmart Pro",
+      "url": "https://shopsmartpro.com/",
+      "description": "Your smarter shopping assistant for Amazon & eBay. Track prices, compare deals, and save money with one click.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://shopsmartpro.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        schema={seoData.schema}
+      />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto">
@@ -121,8 +151,9 @@ function Home() {
               <div className="relative z-10">
                 <img 
                   src={heroImage} 
-                  alt="ShopSmart Pro Interface" 
+                  alt="ShopSmart Pro Chrome extension interface showing price comparison and deal alerts for Amazon and eBay shopping" 
                   className="w-full h-auto rounded-2xl shadow-2xl"
+                  loading="lazy"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -234,8 +265,9 @@ function Home() {
             <div className="relative">
               <img 
                 src={ecommerceHero} 
-                alt="Shopping Benefits" 
+                alt="Visual representation of shopping benefits with ShopSmart Pro showing price comparisons and savings on popular products" 
                 className="w-full h-auto rounded-2xl shadow-2xl"
+                loading="lazy"
               />
             </div>
           </div>

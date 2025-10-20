@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Button } from '@/components/ui/button.jsx'
@@ -59,8 +60,40 @@ function DownloadPage() {
     { number: "24/7", label: "Price Monitoring" }
   ]
 
+  const seoData = {
+    title: "Download ShopSmart Pro - Free Chrome Extension | Price Comparison Tool",
+    description: "Download the free ShopSmart Pro Chrome extension. Compare prices, track deals, and save money on Amazon & eBay purchases. Install now.",
+    keywords: "download shopping extension, free chrome extension, price comparison tool, Amazon eBay extension, deal finder download, shopping assistant chrome",
+    url: "https://shopsmartpro.com/download",
+    image: "https://shopsmartpro.com/images/download-social.jpg",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ShopSmart Pro",
+      "description": "Free Chrome extension to compare prices and find deals on Amazon and eBay",
+      "applicationCategory": "ShoppingApplication",
+      "operatingSystem": "Chrome",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "softwareVersion": "1.0.0",
+      "downloadUrl": "https://chromewebstore.google.com/detail/okhhadlbdbncnikoknfmdlnfmgdffdap"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEO 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        schema={seoData.schema}
+      />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">

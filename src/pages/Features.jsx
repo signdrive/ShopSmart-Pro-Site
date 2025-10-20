@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Button } from '@/components/ui/button.jsx'
@@ -96,8 +97,32 @@ function Features() {
     }
   ]
 
+  const seoData = {
+    title: "Features - ShopSmart Pro | Advanced Price Tracking & Deal Alerts",
+    description: "Explore ShopSmart Pro features: advanced price tracking, smart price comparisons, deal alerts, and more. Save money on Amazon & eBay purchases.",
+    keywords: "price tracking, deal alerts, price comparison, shopping tools, Amazon deals, eBay deals, price monitoring, discount tools",
+    url: "https://shopsmartpro.com/features",
+    image: "https://shopsmartpro.com/images/features-social.jpg",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ShopSmart Pro Features",
+      "description": "Explore advanced features of ShopSmart Pro including price tracking, deal alerts, and smart comparisons for Amazon and eBay.",
+      "url": "https://shopsmartpro.com/features"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEO 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        schema={seoData.schema}
+      />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-6">

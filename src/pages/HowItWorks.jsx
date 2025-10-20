@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Button } from '@/components/ui/button.jsx'
@@ -93,8 +94,53 @@ function HowItWorks() {
     }
   ]
 
+  const seoData = {
+    title: "How It Works - ShopSmart Pro | Easy Installation & Setup Guide",
+    description: "Learn how ShopSmart Pro works: install the Chrome extension, browse Amazon or eBay normally, and get instant price comparisons and deal alerts.",
+    keywords: "how to use shopping extension, install chrome extension, price comparison tutorial, shopping assistant guide, Amazon eBay tool setup",
+    url: "https://shopsmartpro.com/how-it-works",
+    image: "https://shopsmartpro.com/images/how-it-works-social.jpg",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use ShopSmart Pro Shopping Assistant",
+      "description": "Simple steps to install and use ShopSmart Pro Chrome extension for price comparisons and deal alerts on Amazon and eBay.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Install the Extension",
+          "text": "Add ShopSmart Pro to your Chrome browser from the Chrome Web Store"
+        },
+        {
+          "@type": "HowToStep", 
+          "name": "Browse Normally",
+          "text": "Shop on Amazon or eBay as you usually do - the extension works automatically"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "See Instant Comparisons",
+          "text": "View price comparisons and alerts automatically on every product page"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Save Money",
+          "text": "Make informed decisions and save on every purchase with smart alerts"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEO 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        schema={seoData.schema}
+      />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-6">

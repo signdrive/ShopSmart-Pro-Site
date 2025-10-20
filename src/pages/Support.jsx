@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Button } from '@/components/ui/button.jsx'
@@ -63,8 +64,37 @@ function Support() {
     }
   ]
 
+  const seoData = {
+    title: "Support - ShopSmart Pro | Help Center & Contact",
+    description: "Get help with ShopSmart Pro. Browse our help center, contact support, report bugs, and find answers to common questions.",
+    keywords: "shopping extension support, chrome extension help, ShopSmart Pro support, price comparison tool help, contact support, bug report",
+    url: "https://shopsmartpro.com/support",
+    image: "https://shopsmartpro.com/images/support-social.jpg",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ShopSmart Pro Support",
+      "description": "Support resources for ShopSmart Pro Chrome extension including help center, contact options, and FAQ",
+      "url": "https://shopsmartpro.com/support",
+      "relatedLink": [
+        "https://shopsmartpro.com/help-center",
+        "https://shopsmartpro.com/contact",
+        "https://shopsmartpro.com/bug-reports"
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEO 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        schema={seoData.schema}
+      />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-6">
