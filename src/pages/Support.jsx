@@ -68,18 +68,18 @@ function Support() {
     title: "Support - ShopSmart Pro | Help Center & Contact",
     description: "Get help with ShopSmart Pro. Browse our help center, contact support, report bugs, and find answers to common questions.",
     keywords: "shopping extension support, chrome extension help, ShopSmart Pro support, price comparison tool help, contact support, bug report",
-    url: "https://shopsmartpro.com/support",
-    image: "https://shopsmartpro.com/images/support-social.jpg",
+    url: "https://www.shopsmartpro.app/support",
+    image: "https://www.shopsmartpro.app/images/support-social.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "ShopSmart Pro Support",
       "description": "Support resources for ShopSmart Pro Chrome extension including help center, contact options, and FAQ",
-      "url": "https://shopsmartpro.com/support",
+      "url": "https://www.shopsmartpro.app/support",
       "relatedLink": [
-        "https://shopsmartpro.com/help-center",
-        "https://shopsmartpro.com/contact",
-        "https://shopsmartpro.com/bug-reports"
+        "https://www.shopsmartpro.app/help-center",
+        "https://www.shopsmartpro.app/contact",
+        "https://www.shopsmartpro.app/bug-reports"
       ]
     }
   };
